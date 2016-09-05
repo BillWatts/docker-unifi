@@ -1,0 +1,17 @@
+version: "2"
+services:
+  unifi:
+   image: billwatts/docker-unifi
+   container_name: unifi
+   ports:
+    - 8080:8080
+    - 8081:8081
+    - 8443:8443
+    - 8880:8880
+    - 3478:3478
+   networks:
+     - default
+   environment:
+     - DOCKER_UNIFI_DATA
+   volumes:
+    - ${DOCKER_UNIFI_DATA}:/usr/lib/unifi/data:rw
