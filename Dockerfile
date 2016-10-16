@@ -7,7 +7,7 @@ RUN echo "deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10ge
 
 RUN apt-get update && apt-get -y install wget binutils jsvc mongodb-10gen=2.4.14 openjdk-8-jre-headless
 
-ARG DOCKER_UNIFI_VERSION=5.0.7
+ARG DOCKER_UNIFI_VERSION=5.2.9
 ENV DOCKER_UNIFI_VERSION ${DOCKER_UNIFI_VERSION}
 
 RUN wget "http://dl.ubnt.com/unifi/${DOCKER_UNIFI_VERSION}/unifi_sysvinit_all.deb" \
